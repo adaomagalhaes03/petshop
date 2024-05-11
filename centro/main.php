@@ -71,7 +71,7 @@ if ($_SESSION["usuario"] == null) {
                                         <a href="#">Funcionários</a>
                                     </li>
                                     <li>
-                                        <a href="#">Serviços</a>
+                                        <a href="?pagina=cliente">Clientes</a>
                                     </li>
                                     <li>
                                         <a href="?pagina=produtos">Produtos</a>
@@ -82,6 +82,7 @@ if ($_SESSION["usuario"] == null) {
                                     <li>
                                         <a href="?pagina=usuario">Usuários</a>
                                     </li>
+                                  
                                 </ul>
                             </li>
                             <li>
@@ -90,16 +91,12 @@ if ($_SESSION["usuario"] == null) {
                                     <span class="bot-line"></span>Funcionários</a>
                             </li>
                             <li>
-                                <a href="#">
-                                    <i class="fas fa-copy"></i>
-                                    <span class="bot-line"></span>Stock</a>
+                                <a href="?pagina=vendas">
+                                    <i class="fas fa-cart-shopping"></i>
+                                    <span class="bot-line"></span>Vendas</a>
 
                             </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fas fa-desktop"></i>
-                                    <span class="bot-line"></span>Pagamentos</a>
-                            </li>
+                          
                         </ul>
                     </div>
                     <div class="header__tool">

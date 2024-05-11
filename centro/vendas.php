@@ -8,7 +8,7 @@
                     <div class="au-breadcrumb-left">
                         <ul class="list-unstyled list-inline au-breadcrumb__list">
                             <li class="list-inline-item active">
-                                <a href="#"><b>Home / Gerenciar / Listar Produtos</b></a>
+                                <a href="#"><b>Home / Gerenciar / Listar Vendas</b></a>
                             </li>
                         </ul>
                     </div>
@@ -23,7 +23,7 @@
     <div class="container">
         <div class="card">
             <div class="card-header">
-                <strong>Lista de</strong> Produtos
+                <strong>Lista de</strong> Vendas
             </div>
             <div class="card-body card-block">
 
@@ -31,10 +31,13 @@
                     <table class="table table-borderless table-data3">
                         <thead>
                             <tr>
-                                <th>#</th>
-                                <th>Nome</th>
-                                <th>Descrição</th>
+                                <th>Id</th>
+                                <th>Data</th>
+                                <th>Cliente</th>
+                                <th>Produto</th>
                                 <th>Preço</th>
+                                <th>Qtd</th>
+                                <th>Total a Pagar</th>
                                 <th>Acções</th>
                             </tr>
                         </thead>
@@ -42,43 +45,18 @@
                           
                             <tr>
                                 <td>1</td>
+                                <td>24/05/2024</td>
+                                <td>Lukeny da Cunha</td>
                                 <td>Ração</td>
-                                <td>Ração para cães</td>
-                                <td>34.000 KZS</td>
-                               
-                            
+                                <td>12.000 kzs</td>
+
+                                <td>39</td>
+                                <td>340.000 kzs</td>
                                 <td>
                                     <a href=""><i class="fa fa-edit"></i></a> |
                                     <a href="" style="color: red;;"><i class="fa fa-trash"></i></a>
                             </td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Leite</td>
-                                <td>Para gatos</td>
-                                <td>45.000 KZS</td>
-                               
-                            
-                                <td>
-                                    <a href=""><i class="fa fa-edit"></i></a> |
-                                    <a href="" style="color: red;;"><i class="fa fa-trash"></i></a>
-                            </td>
-                            </tr>
-
-                            <tr>
-                                <td>3</td>
-                                <td>Burger king</td>
-                                <td>Ração para cães</td>
-                                <td>349.000 KZS</td>
-                               
-                            
-                                <td>
-                                    <a href=""><i class="fa fa-edit"></i></a> |
-                                    <a href="" style="color: red;;"><i class="fa fa-trash"></i></a>
-                            </td>
-                            </tr>
-
-
+                         
 
                         </tbody>
                     </table>
@@ -88,7 +66,7 @@
 
             </div>
             <div class="card-footer">
-                <a href="?pagina=f_produtos" class="btn btn-success btn-sm">
+                <a href="?pagina=f_vendas" class="btn btn-success btn-sm">
                     <i class="fa fa-dot-circle-o"></i> Adicionar
                             </a>
             </div>
