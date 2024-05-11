@@ -13,7 +13,7 @@ class connection{
         
         $this->host = 'localhost';
         $this->user = 'root';
-        $this->databaseName = 'db_centro';
+        $this->databaseName = 'db_petshop';
         $this->password = '';
         $this->port = 3306;
         $this->conn = false;

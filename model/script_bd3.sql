@@ -76,18 +76,6 @@ CREATE TABLE IF NOT EXISTS `db_petshop`.`animal` (
 ENGINE = InnoDB;
 
 
--- -----------------------------------------------------
--- Table `db_petshop`.`servico`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `db_petshop`.`servico` (
-  `ServicoID` INT NOT NULL AUTO_INCREMENT,
-  `Nome` VARCHAR(100) NOT NULL,
-  `Descricao` VARCHAR(200),
-  `Preco` DECIMAL(10, 2) NOT NULL,
-  PRIMARY KEY (`ServicoID`)
-)
-ENGINE = InnoDB;
-
 
 -- -----------------------------------------------------
 -- Table `db_petshop`.`produto`
