@@ -71,10 +71,13 @@ if ($_SESSION["usuario"] == null) {
                                         <a href="#">Funcionários</a>
                                     </li>
                                     <li>
-                                        <a href="#">Stock</a>
+                                        <a href="#">Serviços</a>
                                     </li>
                                     <li>
                                         <a href="?pagina=produtos">Produtos</a>
+                                    </li>
+                                    <li>
+                                        <a href="?pagina=animais">Animais</a>
                                     </li>
                                     <li>
                                         <a href="?pagina=usuario">Usuários</a>
