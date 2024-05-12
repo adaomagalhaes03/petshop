@@ -8,9 +8,6 @@ $id_usuario = '';
 extract($_REQUEST);
 
 include ('rotas/rota1.php');
-include ('rotas/rota2.php');
-include ('rotas/rota3.php');
-include ('rotas/rota4.php');
 
 
 session_start();
