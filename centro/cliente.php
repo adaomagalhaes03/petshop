@@ -1,4 +1,10 @@
+<?php
 
+include_once ('../controller/ccCliente.php');
+
+$listaClientes = getClientes();
+
+?>
 
 <section class="au-breadcrumb2">
     <div class="container">
@@ -31,48 +37,62 @@
                     <table class="table table-borderless table-data3">
                         <thead>
                             <tr>
-                                <th>Id</th>
+                                <th>#</th>
                                 <th>Nome</th>
                                 <th>Email</th>
                                 <th>Telefone</th>
-                                <th>Acções</th>
+                                <th>Endereço</th>
+                                <th>Ações</th>
                             </tr>
                         </thead>
                         <tbody>
-                          
+                            <?php
+                            $i = 1;
+                            foreach($listaClientes as $cliente){ ?>
                             <tr>
-                                <td>1</td>
-                                <td>Lukeny da Cunha</td>
-                                <td>srkeny@gmail.com</td>
-                                <td>934 344 245</td>
-                               
-    
+                                <td><?php echo $i; ?></td>
+                                <td><?php echo $cliente['Nome']; ?></td>
+                                <td><?php echo $cliente['Email']; ?></td>
+                                <td><?php echo $cliente['Telefone']; ?></td>
+                                <td><?php echo $cliente['Endereco']; ?></td>
                                 <td>
-                                    <a href=""><i class="fa fa-edit"></i></a> |
-                                    <a href="" style="color: red;;"><i class="fa fa-trash"></i></a>
-                            </td>
-                         
-                          
-
-                                
-                            
-                                
-                          
-
-
-
+                                    <a href="#"><i class="fa fa-edit"></i></a> |
+                                    <a href="#" style="color: red;" data-toggle="modal" data-target="#confirmDelete<?php echo $cliente['ClienteID']; ?>"><i class="fa fa-trash"></i></a>
+                                </td>
+                            </tr>
+                            <?php $i++; } ?>
                         </tbody>
                     </table>
                 </div>
-
-
-
             </div>
             <div class="card-footer">
-                <a href="?pagina=f_cliente" class="btn btn-success btn-sm">
+                <a href="?pagina=f_clientes" class="btn btn-success btn-sm">
                     <i class="fa fa-dot-circle-o"></i> Adicionar
-                            </a>
+                </a>
             </div>
         </div>
     </div>
 </section>
+
+<!-- Modal de Confirmação de Exclusão -->
+<?php foreach($listaClientes as $cliente){ ?>
+<div class="modal fade" id="confirmDelete<?php echo $cliente['ClienteID']; ?>" tabindex="-1" role="dialog" aria-labelledby="confirmDeleteLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="confirmDeleteLabel">Eliminar o cliente</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Tem certeza que deseja apagar "<?php echo $cliente['Nome']; ?>"?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <a href="../controller/cliente_controller.php?Acao=Eliminar&ClienteID=<?php echo $cliente['ClienteID']; ?>" class="btn btn-danger">Apagar</a>
+            </div>
+        </div>
+    </div>
+</div>
+<?php } ?>

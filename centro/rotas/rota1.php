@@ -29,10 +29,10 @@ if (isset($pagina)) {
             $pag_actual = 'f_animais.php';
             break;
             //cliente
-        case 'cliente':
+        case 'clientes':
             $pag_actual = 'cliente.php';
             break;
-        case 'f_cliente':
+        case 'f_clientes':
             $pag_actual = 'f_cliente.php';
             break;
 

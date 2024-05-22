@@ -68,7 +68,7 @@ if ($_SESSION["usuario"] == null) {
                                         <a href="#">Funcionários</a>
                                     </li>
                                     <li>
-                                        <a href="?pagina=cliente">Clientes</a>
+                                        <a href="?pagina=clientes">Clientes</a>
                                     </li>
                                     <li>
                                         <a href="?pagina=produtos">Produtos</a>
